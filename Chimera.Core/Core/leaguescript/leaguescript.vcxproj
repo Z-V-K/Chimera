@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Prod|Win32">
+      <Configuration>Prod</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Prod|x64">
+      <Configuration>Prod</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a0cf99ec-5db8-4d62-a3e8-d6336d833888}</ProjectGuid>
+    <RootNamespace>leaguescript</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LeagueHub.Core</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Prod|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Prod|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <TargetName>InternalCore</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <TargetName>InternalCore</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>%appdata%\Chimera\</OutDir>
+    <TargetName>InternalCore</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>InternalCore</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
+    <OutDir>$(AppData)\Chimera\</OutDir>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\tmp</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>InternalCore</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
+    <OutDir>$(AppData)\Chimera\</OutDir>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\tmp</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgTriplet>x86-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|Win32'" Label="Vcpkg">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgTriplet>x86-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgTriplet>x64-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prod|x64'" Label="Vcpkg">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgTriplet>x64-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgTriplet>x86-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;LEAGUESCRIPT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;LEAGUESCRIPT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)/includes</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <DisableSpecificWarnings>4309;4838</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>dbghelp.lib;ntdll.lib;d3d9.lib;d3dx9.lib;d3d11.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Prod|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;LEAGUESCRIPT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)/includes</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <DisableSpecificWarnings>4309;4838</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>dbghelp.lib;ntdll.lib;d3d9.lib;d3dx9.lib;d3d11.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;LEAGUESCRIPT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)/includes</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4309;4838;4311;4312;4302</DisableSpecificWarnings>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>dbghelp.lib;ntdll.lib;d3d9.lib;d3dx9.lib;d3d11.lib;d3dx11.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Prod|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>PROD;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)/includes</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4309;4838;4311;4312;4302</DisableSpecificWarnings>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <UseStandardPreprocessor>true</UseStandardPreprocessor>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>dbghelp.lib;ntdll.lib;d3d9.lib;d3dx9.lib;d3d11.lib;d3dx11.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Addresses\Addresses.h" />
+    <ClInclude Include="Addresses\Structures.h" />
+    <ClInclude Include="Core\Context\Context.h" />
+    <ClInclude Include="Core\Core.h" />
+    <ClInclude Include="Core\skCrypt\skCrypt.h" />
+    <ClInclude Include="Core\skCrypt\XorStr.h" />
+    <ClInclude Include="Framework\Buffs\BuffEntry\BuffEntry.h" />
+    <ClInclude Include="Framework\Buffs\BuffManager\BuffManager.h" />
+    <ClInclude Include="Framework\CharacterInfo\CharacterState.h" />
+    <ClInclude Include="Framework\Containers\ManagerTemplate.h" />
+    <ClInclude Include="Framework\Containers\RiotString.h" />
+    <ClInclude Include="Framework\Containers\RiotVector.h" />
+    <ClInclude Include="Framework\Enums\BuffType.h" />
+    <ClInclude Include="Framework\Enums\CollisionFlag.h" />
+    <ClInclude Include="Framework\Enums\DirectXVersionEnum.h" />
+    <ClInclude Include="Framework\Enums\EventType.h" />
+    <ClInclude Include="Framework\Enums\GameObjectEnums.h" />
+    <ClInclude Include="Framework\Enums\GameStartDataEnums.h" />
+    <ClInclude Include="Framework\Enums\ItemId.h" />
+    <ClInclude Include="Framework\Enums\SpellEnums.h" />
+    <ClInclude Include="Framework\Enums\WindowFocusEnum.h" />
+    <ClInclude Include="Framework\GameClient\GameClient.h" />
+    <ClInclude Include="Framework\GameEngine\EventSystem\EventSystem.h" />
+    <ClInclude Include="Framework\GameEngine\GameTime\GameTime.h" />
+    <ClInclude Include="Framework\GameEngine\ManagerList\ManagerList.h" />
+    <ClInclude Include="Framework\GameEngine\NetClient\NetClient.h" />
+    <ClInclude Include="Framework\GameEngine\ObjectManager\ObjectManager.h" />
+    <ClInclude Include="Framework\GameObjects\EffectEmitter\EffectEmitter.h" />
+    <ClInclude Include="Framework\GameObjects\EffectEmitter\EffectEmitterAttachment.h" />
+    <ClInclude Include="Framework\GameObjects\EffectEmitter\EffectEmitterData.h" />
+    <ClInclude Include="Framework\GameObjects\EffectEmitter\EffectCreateDataClient.h" />
+    <ClInclude Include="Framework\GameObjects\GameObject\CharacterData.h" />
+    <ClInclude Include="Framework\GameObjects\GameObject\GameObject.h" />
+    <ClInclude Include="Framework\GameObjects\MissileClient\MissileClient.h" />
+    <ClInclude Include="Framework\GameStartData\GameStartData.h" />
+    <ClInclude Include="Framework\Hash\LeagueHash.h" />
+    <ClInclude Include="Framework\Hud\Chat\Chat.h" />
+    <ClInclude Include="Framework\Hud\Cursor\Cursor.h" />
+    <ClInclude Include="Framework\Hud\Hud\Hud.h" />
+    <ClInclude Include="Framework\Hud\Minimap\Minimap.h" />
+    <ClInclude Include="Framework\Hud\Zoom\Zoom.h" />
+    <ClInclude Include="Framework\Items\ItemData\ItemData.h" />
+    <ClInclude Include="Framework\Items\ItemInfo\ItemInfo.h" />
+    <ClInclude Include="Framework\Items\ItemSlot\ItemSlot.h" />
+    <ClInclude Include="Framework\Navigation\NavigationPath\NavigationPath.h" />
+    <ClInclude Include="Framework\Navigation\NavMesh\NavMesh.h" />
+    <ClInclude Include="Framework\Navigation\PathControllerCommon\PathControllerCommon.h" />
+    <ClInclude Include="Framework\Navigation\SetPathDashData\SetPathDashData.h" />
+    <ClInclude Include="Framework\Rendering\MouseOverEffectData\MouseOverEffectData.h" />
+    <ClInclude Include="Framework\Rendering\r3dRenderer\r3dRenderer.h" />
+    <ClInclude Include="Framework\Rendering\r3dTexture\r3dTexture.h" />
+    <ClInclude Include="Framework\Rendering\RenderPipelineLOL\RenderPipelineLOL.h" />
+    <ClInclude Include="Framework\Spells\SpellCastInfo\SpellCastInfo.h" />
+    <ClInclude Include="Framework\Spells\Spellbook\SpellBook.h" />
+    <ClInclude Include="Framework\Spells\SpellDataResource\SpellDataResource.h" />
+    <ClInclude Include="Framework\Spells\SpellDataScript\SpellDataScript.h" />
+    <ClInclude Include="Framework\Spells\SpellData\SpellData.h" />
+    <ClInclude Include="Framework\Spells\Spellslot\SpellSlot.h" />
+    <ClInclude Include="Framework\Spells\SpellTargetClient\SpellTargetClient.h" />
+    <ClInclude Include="Imgui\Fontawesome5Icons.h" />
+    <ClInclude Include="Imgui\imconfig.h" />
+    <ClInclude Include="Imgui\imgui.h" />
+    <ClInclude Include="Imgui\imgui_internal.h" />
+    <ClInclude Include="Imgui\imgui_notify.h" />
+    <ClInclude Include="Imgui\impl\imgui_impl_dx11.h" />
+    <ClInclude Include="Imgui\impl\imgui_impl_dx9.h" />
+    <ClInclude Include="Imgui\impl\imgui_impl_win32.h" />
+    <ClInclude Include="Imgui\imstb_rectpack.h" />
+    <ClInclude Include="Imgui\imstb_textedit.h" />
+    <ClInclude Include="Imgui\imstb_truetype.h" />
+    <ClInclude Include="Imgui\misc\freetype\imgui_freetype.h" />
+    <ClInclude Include="Imgui\text_editor.h" />
+    <ClInclude Include="Impl\Assets\cascadia_semibold.h" />
+    <ClInclude Include="Impl\Assets\fa.h" />
+    <ClInclude Include="Impl\Assets\museosanscyrl-500.h" />
+    <ClInclude Include="Impl\Assets\nanum.h" />
+    <ClInclude Include="Impl\Base\base.h" />
+    <ClInclude Include="Impl\Bypass\Bypass.h" />
+    <ClInclude Include="Impl\Common\Common.h" />
+    <ClInclude Include="Impl\Common\RawCommon.h" />
+    <ClInclude Include="Impl\Common\Utils.h" />
+    <ClInclude Include="Impl\DirectX\DirectX.h" />
+    <ClInclude Include="Impl\Encryption\Encryption.h" />
+    <ClInclude Include="Impl\EntityList\EntityList.h" />
+    <ClInclude Include="Impl\Globals\Globals.h" />
+    <ClInclude Include="Impl\Hooks\Decrypt\Decrypt.h" />
+    <ClInclude Include="Impl\Hooks\hexify\hexify.h" />
+    <ClInclude Include="Impl\Hooks\Hook.h" />
+    <ClInclude Include="Impl\Hooks\HooksCommons.h" />
+    <ClInclude Include="Impl\Hooks\Inline\InlineHook.h" />
+    <ClInclude Include="Impl\Hooks\retspoof\x64RetSpoof.h" />
+    <ClInclude Include="Impl\Hooks\syscall\syscall.h" />
+    <ClInclude Include="Impl\Hooks\VMT\VMTHook.h" />
+    <ClInclude Include="Impl\Input\Input.h" />
+    <ClInclude Include="Impl\Logger\Logger.h" />
+    <ClInclude Include="Impl\Managers\AntiGapcloserManager\AntiGapcloserManager.h" />
+    <ClInclude Include="Impl\Managers\ConfigManager\ConfigManager.h" />
+    <ClInclude Include="Impl\Managers\DmgLibManager\DamageLibManager.h" />
+    <ClInclude Include="Impl\Managers\DrawManager\DrawManager.h" />
+    <ClInclude Include="Impl\Managers\EvadeManager\EvadeManager.h" />
+    <ClInclude Include="Impl\Managers\EventManager\EventManager.h" />
+    <ClInclude Include="Impl\Managers\GlowManager\GlowManager.h" />
+    <ClInclude Include="Impl\Managers\HealthPredManager\HealthPredictionManager.h" />
+    <ClInclude Include="Impl\Managers\MenuManager\MenuManager.h" />
+    <ClInclude Include="Impl\Managers\OrbwalkerManager\OrbwalkerManager.h" />
+    <ClInclude Include="Impl\Managers\PermashowManager\PermashowManager.h" />
+    <ClInclude Include="Impl\Managers\PredictionManager\PredictionManager.h" />
+    <ClInclude Include="Impl\Managers\ShaderManager\ShaderManager.h" />
+    <ClInclude Include="Impl\Managers\TargetSelectorManager\TargetSelectorManager.h" />
+    <ClInclude Include="Impl\Managers\TextureManager\TextureManager.h" />
+    <ClInclude Include="Impl\Scheduler\Scheduler.h" />
+    <ClInclude Include="Impl\Singleton\Singleton.h" />
+    <ClInclude Include="Impl\UI\Console\Console.h" />
+    <ClInclude Include="Impl\UI\Menu\AMenuComponent.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\Menu.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\MenuBool.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\MenuButton.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\MenuColorPick.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\MenuCombo.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\MenuKeyBind.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\MenuSeparator.h" />
+    <ClInclude Include="Impl\UI\Menu\Components\MenuSlider.h" />
+    <ClInclude Include="Impl\UI\Menu\MenuItem.h" />
+    <ClInclude Include="Impl\UI\Menu\MenuSettings.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\IDrawable.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\BoolBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\ButtonBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\ColorPickBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\ComboBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\KeyBindBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\MenuBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\SeparatorBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Components\SliderBaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\Impl\Themes\BaseTheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\ITheme.h" />
+    <ClInclude Include="Impl\UI\Menu\Theme\ThemeUtils.h" />
+    <ClInclude Include="Impl\UI\Menu\Translator.h" />
+    <ClInclude Include="Impl\UI\Permashow\Permashow.h" />
+    <ClInclude Include="Impl\UI\Texture\stb_image.h" />
+    <ClInclude Include="Impl\UI\Texture\Texture.h" />
+    <ClInclude Include="Impl\Vector\Vector.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="SDK\CPP\DllBootstrap.h" />
+    <ClInclude Include="SDK\CPP\DllMapper.h" />
+    <ClInclude Include="SDK\CPP\PluginSDK.h" />
+    <ClInclude Include="SDK\CPP\Script.h" />
+    <ClInclude Include="SDK\LUA\LuaBootstrap.h" />
+    <ClInclude Include="SDK\LUA\LuaExporter.h" />
+    <ClInclude Include="SDK\LUA\LuaIncludes.h" />
+    <ClInclude Include="SDK\LUA\LuaTexture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Context\Context.cpp" />
+    <ClCompile Include="Core\Core.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Framework\Buffs\BuffEntry\BuffEntry.cpp" />
+    <ClCompile Include="Framework\Buffs\BuffManager\BuffManager.cpp" />
+    <ClCompile Include="Framework\CharacterInfo\CharacterState.cpp" />
+    <ClCompile Include="Framework\GameClient\GameClient.cpp" />
+    <ClCompile Include="Framework\GameEngine\EventSystem\EventSystem.cpp" />
+    <ClCompile Include="Framework\GameEngine\GameTime\GameTime.cpp" />
+    <ClCompile Include="Framework\GameEngine\ManagerList\ManagerList.cpp" />
+    <ClCompile Include="Framework\GameEngine\NetClient\NetClient.cpp" />
+    <ClCompile Include="Framework\GameEngine\ObjectManager\ObjectManager.cpp" />
+    <ClCompile Include="Framework\GameObjects\EffectEmitter\EffectCreateDataClient.cpp" />
+    <ClCompile Include="Framework\GameObjects\EffectEmitter\EffectEmitter.cpp" />
+    <ClCompile Include="Framework\GameObjects\EffectEmitter\EffectEmitterAttachment.cpp" />
+    <ClCompile Include="Framework\GameObjects\EffectEmitter\EffectEmitterData.cpp" />
+    <ClCompile Include="Framework\GameObjects\GameObject\CharacterData.cpp" />
+    <ClCompile Include="Framework\GameObjects\GameObject\GameObject.cpp" />
+    <ClCompile Include="Framework\GameObjects\MissileClient\MissileClient.cpp" />
+    <ClCompile Include="Framework\GameStartData\GameStartData.cpp" />
+    <ClCompile Include="Framework\Hud\Chat\Chat.cpp" />
+    <ClCompile Include="Framework\Hud\Cursor\Cursor.cpp" />
+    <ClCompile Include="Framework\Hud\Hud\Hud.cpp" />
+    <ClCompile Include="Framework\Hud\Minimap\Minimap.cpp" />
+    <ClCompile Include="Framework\Hud\Zoom\Zoom.cpp" />
+    <ClCompile Include="Framework\Items\ItemData\ItemData.cpp" />
+    <ClCompile Include="Framework\Items\ItemInfo\ItemInfo.cpp" />
+    <ClCompile Include="Framework\Items\ItemSlot\ItemSlot.cpp" />
+    <ClCompile Include="Framework\Navigation\NavigationPath\NavigationPath.cpp" />
+    <ClCompile Include="Framework\Navigation\NavMesh\NavMesh.cpp" />
+    <ClCompile Include="Framework\Navigation\PathControllerCommon\PathControllerCommon.cpp" />
+    <ClCompile Include="Framework\Rendering\MouseOverEffectData\MouseOverEffectData.cpp" />
+    <ClCompile Include="Framework\Rendering\r3dRenderer\r3dRenderer.cpp" />
+    <ClCompile Include="Framework\Rendering\r3dTexture\r3dTexture.cpp" />
+    <ClCompile Include="Framework\Rendering\RenderPipelineLOL\RenderPipelineLOL.cpp" />
+    <ClCompile Include="Framework\Spells\SpellCastInfo\SpellCastInfo.cpp" />
+    <ClCompile Include="Framework\Spells\Spellbook\SpellBook.cpp" />
+    <ClCompile Include="Framework\Spells\SpellDataResource\SpellDataResource.cpp" />
+    <ClCompile Include="Framework\Spells\SpellDataScript\SpellDataScript.cpp" />
+    <ClCompile Include="Framework\Spells\SpellData\SpellData.cpp" />
+    <ClCompile Include="Framework\Spells\Spellslot\SpellSlot.cpp" />
+    <ClCompile Include="Framework\Spells\SpellTargetClient\SpellTargetClient.cpp" />
+    <ClCompile Include="Imgui\imgui.cpp" />
+    <ClCompile Include="Imgui\imgui_draw.cpp" />
+    <ClCompile Include="Imgui\imgui_tables.cpp" />
+    <ClCompile Include="Imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Imgui\impl\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Imgui\impl\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Imgui\impl\imgui_impl_win32.cpp" />
+    <ClCompile Include="Imgui\misc\freetype\imgui_freetype.cpp" />
+    <ClCompile Include="Imgui\text_editor.cpp" />
+    <ClCompile Include="Impl\Base\base.cpp" />
+    <ClCompile Include="Impl\Bypass\Bypass.cpp" />
+    <ClCompile Include="Impl\Common\Utils.cpp" />
+    <ClCompile Include="Impl\DirectX\DirectX.cpp" />
+    <ClCompile Include="Impl\EntityList\EntityList.cpp" />
+    <ClCompile Include="Impl\Globals\Globals.cpp" />
+    <ClCompile Include="Impl\Hooks\Decrypt\Decrypt.cpp" />
+    <ClCompile Include="Impl\Hooks\Hook.cpp" />
+    <ClCompile Include="Impl\Hooks\HooksCommons.cpp" />
+    <ClCompile Include="Impl\Hooks\Inline\InlineHook.cpp" />
+    <ClCompile Include="Impl\Hooks\VMT\VMTHook.cpp" />
+    <ClCompile Include="Impl\Input\Input.cpp" />
+    <ClCompile Include="Impl\Logger\Logger.cpp" />
+    <ClCompile Include="Impl\Managers\AntiGapcloserManager\AntiGapcloserManager.cpp" />
+    <ClCompile Include="Impl\Managers\ConfigManager\ConfigManager.cpp" />
+    <ClCompile Include="Impl\Managers\DmgLibManager\DamageLibManager.cpp" />
+    <ClCompile Include="Impl\Managers\DrawManager\DrawManager.cpp" />
+    <ClCompile Include="Impl\Managers\EvadeManager\EvadeManager.cpp" />
+    <ClCompile Include="Impl\Managers\EventManager\EventManager.cpp" />
+    <ClCompile Include="Impl\Managers\GlowManager\GlowManager.cpp" />
+    <ClCompile Include="Impl\Managers\HealthPredManager\HealthPredictionManager.cpp" />
+    <ClCompile Include="Impl\Managers\MenuManager\MenuManager.cpp" />
+    <ClCompile Include="Impl\Managers\OrbwalkerManager\OrbwalkerManager.cpp" />
+    <ClCompile Include="Impl\Managers\PermashowManager\PermashowManager.cpp" />
+    <ClCompile Include="Impl\Managers\PredictionManager\PredictionManager.cpp" />
+    <ClCompile Include="Impl\Managers\ShaderManager\ShaderManager.cpp" />
+    <ClCompile Include="Impl\Managers\TargetSelectorManager\TargetSelectorManager.cpp" />
+    <ClCompile Include="Impl\Managers\TextureManager\TextureManager.cpp" />
+    <ClCompile Include="Impl\Scheduler\Scheduler.cpp" />
+    <ClCompile Include="Impl\UI\Console\Console.cpp" />
+    <ClCompile Include="Impl\UI\Menu\AMenuComponent.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\Menu.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\MenuBool.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\MenuButton.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\MenuColorPick.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\MenuCombo.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\MenuKeyBind.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\MenuSeparator.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Components\MenuSlider.cpp" />
+    <ClCompile Include="Impl\UI\Menu\MenuItem.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\BoolBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\ButtonBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\ColorPickBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\ComboBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\KeyBindBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\MenuBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\SeparatorBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Components\SliderBaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\Impl\Themes\BaseTheme.cpp" />
+    <ClCompile Include="Impl\UI\Menu\Theme\ThemeUtils.cpp" />
+    <ClCompile Include="Impl\UI\Permashow\Permashow.cpp" />
+    <ClCompile Include="Impl\UI\Texture\Texture.cpp" />
+    <ClCompile Include="Impl\Vector\Vector.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Prod|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SDK\CPP\DllBootstrap.cpp" />
+    <ClCompile Include="SDK\CPP\DllMapper.cpp" />
+    <ClCompile Include="SDK\LUA\LuaBootstrap.cpp" />
+    <ClCompile Include="SDK\LUA\LuaExporter.cpp" />
+    <ClCompile Include="SDK\CPP\PluginSDK.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="Impl\Hooks\retspoof\shellcode.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Impl\DllManager\" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

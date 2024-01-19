@@ -1,0 +1,12 @@
+---@class missileclient
+---@field public spell_data spelldata
+---@field public start_position vec3
+---@field public end_position vec3
+---@field public cast_position vec3
+---@field public slot integer
+---@field public missile_index integer 
+---@field public source gameobject
+---@field public target gameobject
+---@field public windup_time number
+---@field public cooldown number
+---@field public mana_cost number

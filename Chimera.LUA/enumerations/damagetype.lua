@@ -1,0 +1,5 @@
+---@class damagetype
+---@field public raw integer
+---@field public phy integer
+---@field public mag integer
+---@field public mix integer

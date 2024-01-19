@@ -1,0 +1,92 @@
+# Prerequisites
+*.d
+
+.vs/*
+.idea/*
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.db
+*.ipch
+*.isuo
+
+.vs/
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.tlog
+*.pdb
+*.cer
+*.sbr
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+*.lastbuildstate
+ipch/
+obj/
+cmake/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+
+#MonoDevelop
+*.pidb
+*.userprefs
+
+# Precompiled Headers
+*.gch
+*.pch
+*.ipch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+
+# Executables
+*.exe
+*.out
+*.app
+
+*Debug/
+*Release/
+*TempFiles/
+leaguescript/.vs/leaguescript/v16/Browse.VC.db-shm
+leaguescript/.vs/leaguescript/v16/Browse.VC.db-wal
+leaguescript/.vs/leaguescript/v16/Browse.VC.opendb
+leaguescript/.vs/leaguescript/v17/Browse.VC.db-shm
+leaguescript/.vs/leaguescript/v17/Browse.VC.db-wal
+leaguescript/.vs/leaguescript/v17/Browse.VC.opendb
+leaguescript/.vs/leaguescript/v17/Solution.VC.db-shm
+leaguescript/.vs/leaguescript/v17/Solution.VC.db-wal
+*.bin
+leaguescript/.vs/leaguescript/v17/fileList.bin
+*.bin

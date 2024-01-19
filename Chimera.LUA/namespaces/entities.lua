@@ -1,0 +1,22 @@
+---@class entities
+---@field public heroes gameobject[]
+---@field public minions gameobject[]
+---@field public turrets gameobject[]
+---@field public ally_turrets gameobject[]
+---@field public enemy_turrets gameobject[]
+---@field public inhibitors gameobject[]
+---@field public ally_inhibitors gameobject[]
+---@field public enemy_inhibitors gameobject[]
+---@field public nexus gameobject[]
+---@field public ally_nexus gameobject[]
+---@field public enemy_nexus gameobject[]
+---@field public missiles gameobject[]
+---@field public ally_missiles gameobject[]
+---@field public enemy_missiles gameobject[]
+---@field public clones gameobject[]
+---@field public ally_clones gameobject[]
+---@field public enemy_clones gameobject[]
+---@field public neutral_camps gameobject[]
+---@field public objects gameobject[]
+
+_G.entities = { }

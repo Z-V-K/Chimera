@@ -1,0 +1,7 @@
+---@class pcc
+---@field public waypoints vec3[]
+---@field public curr_segment integer
+---@field public start vec3
+---@field public end vec3
+---@field public nb_waypoints integer
+---@field public length number

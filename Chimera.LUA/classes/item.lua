@@ -1,0 +1,13 @@
+---@class item
+---@field public stacks integer 
+---@field public id integer
+---@field public price number
+---@field public ability_haste number
+---@field public health number
+---@field public movement_speed number
+---@field public armor number
+---@field public magic_resistance number
+---@field public ad number
+---@field public ap number
+---@field public attack_speed_multiplier number
+---@field public shield_power_multiplier number

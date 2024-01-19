@@ -1,0 +1,32 @@
+---@class objecttype
+---@field public Unknown integer
+---@field public NeutralMinionCamp integer
+---@field public AIHeroClient integer
+---@field public AIMarker integer
+---@field public AIMinionClient integer
+---@field public ObjectAttacher integer
+---@field public LevelPropAIClient integer
+---@field public AITurretClient integer
+---@field public AITurretCommon integer
+---@field public obj_GeneralParticleEmitter integer
+---@field public GameObject integer
+---@field public MissileClient integer
+---@field public DrawFX integer
+---@field public UnrevealedTarget integer
+---@field public BarracksDampener integer
+---@field public Barracks integer
+---@field public AnimatedBuilding integer
+---@field public BuildingClient integer
+---@field public obj_Levelsizer integer
+---@field public obj_NavPoint integer
+---@field public obj_SpawnPoint integer
+---@field public GrassObject integer
+---@field public HQ integer
+---@field public obj_InfoPoint integer
+---@field public LevelPropGameObject integer
+---@field public LevelPropSpawnerPoint integer
+---@field public Shop integer
+---@field public Turret integer
+
+---@type objecttype
+_G.object_type = { }

@@ -1,0 +1,11 @@
+---@class buff
+---@field public type integer
+---@field public count integer
+---@field public start_time number
+---@field public end_time number
+---@field public remaining_time number
+---@field public total_duration number
+---@field public name string
+---@field public hash number
+---@field public caster gameobject
+---@field public owner gameobject

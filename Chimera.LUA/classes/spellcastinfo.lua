@@ -1,0 +1,12 @@
+---@class spellcastinfo
+---@field public source gameobject
+---@field public target gameobject
+---@field public spell_data spelldata
+---@field public start_pos vec3
+---@field public end_pos vec3
+---@field public cast_pos vec3
+---@field public is_auto boolean
+---@field public is_spell boolean
+---@field public is_special_attack boolean
+---@field public slot integer
+---@field public cast_delay number

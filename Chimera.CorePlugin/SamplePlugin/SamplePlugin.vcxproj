@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Plugins\Awareness\NotificationSystem\NotificationSystem.cpp" />
+    <ClCompile Include="Plugins\Awareness\ItemTracker\ItemTracker.cpp" />
+    <ClCompile Include="Plugins\Awareness\Hud\Hud.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Plugins\Activator\Activator.cpp" />
+    <ClCompile Include="Plugins\Activator\ActivatorMisc.cpp" />
+    <ClCompile Include="Plugins\Activator\ActivatorPotions.cpp" />
+    <ClCompile Include="Plugins\Activator\AutoSmite.cpp" />
+    <ClCompile Include="Plugins\Activator\DefensiveItems.cpp" />
+    <ClCompile Include="Plugins\Activator\OffensiveItems.cpp" />
+    <ClCompile Include="Plugins\Activator\SummonerSpells.cpp" />
+    <ClCompile Include="Plugins\AntiGapcloser\AntiGapcloser.cpp" />
+    <ClCompile Include="Plugins\Awareness\Awareness.cpp" />
+    <ClCompile Include="Plugins\Awareness\ChampionTracker\ChampionTracker.cpp" />
+    <ClCompile Include="Plugins\Awareness\JungleTracker\JungleTracker.cpp" />
+    <ClCompile Include="Plugins\Awareness\RangeIndicator\RangeIndicator.cpp" />
+    <ClCompile Include="Plugins\Awareness\SpellTracker\SpellTracker.cpp" />
+    <ClCompile Include="Plugins\Awareness\WardTracker\WardTracker.cpp" />
+    <ClCompile Include="Plugins\Awareness\Waypoints\Waypoints.cpp" />
+    <ClCompile Include="Plugins\DamageLib\DamageLib.cpp" />
+    <ClCompile Include="Plugins\Debug\Debug.cpp" />
+    <ClCompile Include="Plugins\Evade\Algorithm\EvadeGrid.cpp" />
+    <ClCompile Include="Plugins\Evade\Algorithm\StandardEvade.cpp" />
+    <ClCompile Include="Plugins\Evade\Algorithm\ThetaStar.cpp" />
+    <ClCompile Include="Plugins\Evade\DB\EvadeDB.cpp" />
+    <ClCompile Include="Plugins\Evade\DB\EvadeSpellData.cpp" />
+    <ClCompile Include="Plugins\Evade\Evade.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedCircle.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedCone.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedCustomShape.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedLine.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedMissileLine.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedPerpendicularLine.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedRing.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedSpell.cpp" />
+    <ClCompile Include="Plugins\Evade\SpellDetector\SpellDetector.cpp" />
+    <ClCompile Include="Plugins\HealthPred\HealthPrediction.cpp" />
+    <ClCompile Include="Plugins\Orbwalker\Orbwalker.cpp" />
+    <ClCompile Include="Plugins\Orbwalker\TurretMissileManager.cpp" />
+    <ClCompile Include="Plugins\Permashow\PermashowDebug.cpp" />
+    <ClCompile Include="Plugins\Plugin.cpp" />
+    <ClCompile Include="Plugins\Prediction\AoePrediction.cpp" />
+    <ClCompile Include="Plugins\Prediction\PathsCache.cpp" />
+    <ClCompile Include="Plugins\Prediction\Prediction.cpp" />
+    <ClCompile Include="Plugins\TargetSelector\TargetSelector.cpp" />
+    <ClCompile Include="Plugins\Utils\Collisions.cpp" />
+    <ClCompile Include="SDK\clipper2\clipper.engine.cpp" />
+    <ClCompile Include="SDK\clipper2\clipper.offset.cpp" />
+    <ClCompile Include="SDK\clipper2\clipper.rectclip.cpp" />
+    <ClCompile Include="SDK\Geometry.cpp" />
+    <ClCompile Include="SDK\SDK.cpp" />
+    <ClCompile Include="SDK\Vector.cpp" />
+    <ClCompile Include="Plugins\Awareness\StasisTracker\StasisTracker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Plugins\Awareness\NotificationSystem\NotificationSystem.h" />
+    <ClInclude Include="Plugins\Awareness\ItemTracker\ItemTracker.h" />
+    <ClInclude Include="Plugins\Awareness\Hud\Hud.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Plugins\Activator\Activator.h" />
+    <ClInclude Include="Plugins\Activator\ActivatorMisc.h" />
+    <ClInclude Include="Plugins\Activator\ActivatorPotions.h" />
+    <ClInclude Include="Plugins\Activator\AutoSmite.h" />
+    <ClInclude Include="Plugins\Activator\DefensiveItems.h" />
+    <ClInclude Include="Plugins\Activator\OffensiveItems.h" />
+    <ClInclude Include="Plugins\Activator\SummonerSpells.h" />
+    <ClInclude Include="Plugins\AntiGapcloser\AntiGapcloser.h" />
+    <ClInclude Include="Plugins\Awareness\Awareness.h" />
+    <ClInclude Include="Plugins\Awareness\ChampionTracker\ChampionTracker.h" />
+    <ClInclude Include="Plugins\Awareness\Colors.h" />
+    <ClInclude Include="Plugins\Awareness\JungleTracker\JungleTracker.h" />
+    <ClInclude Include="Plugins\Awareness\RangeIndicator\RangeIndicator.h" />
+    <ClInclude Include="Plugins\Awareness\SpellTracker\SpellTracker.h" />
+    <ClInclude Include="Plugins\Awareness\WardTracker\WardTracker.h" />
+    <ClInclude Include="Plugins\Awareness\Waypoints\Waypoints.h" />
+    <ClInclude Include="Plugins\Debug\Debug.h" />
+    <ClInclude Include="Plugins\DamageLib\DamageLib.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Botrk.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\CeaselessHunger.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DamageItem.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DeadMansPlate.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Deicide.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DivineSunderer.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DoransRing.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DoransShield.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DrakhtarrsShadowcarver.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DreamShatter.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\DuskbladeOfDrakhtarr.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\EssenceReaver.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\EternalWinter.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Everfrost.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\FrozenFist.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Galeforce.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Goredrinker.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\GuinsooRageblade.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\HextechRocketbelt.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\IcebornGauntlet.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\InfinityForce.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\IronspikeWhip.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\KircheisShard.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\KrakenSlayer.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\LichBane.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Muramana.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\NashorsTooth.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Noonquiver.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\ProwlersClaw.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Rageknife.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\RapidFirecannon.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\RecurveBow.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\RunaanHurricane.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\SeethingSorrow.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Sheen.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\StatikkShiv.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Stormrazor.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\StrideBreaker.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\TearOfTheGoddess.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\TitanicHydra.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\TrinityForce.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\Typhoon.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\UpgradedAeropack.h" />
+    <ClInclude Include="Plugins\DamageLib\Items\WitsEnd.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\AatroxPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\AkaliPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\AkshanPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\AlistarPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ApheliosPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\AshePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\BelvethPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\BlitzcrankPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\BraumMarkPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\BraumPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\CaitlynPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\CamillePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ChogathPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\CorkiPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\DariusPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\DianaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\DravenPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\DrMundoPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\EkkoPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ElisePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\EzrealPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\FioraPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\FizzPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\GalioPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\GangplankPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\GarenPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\GnarPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\GragasPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\GwenPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\HecarimPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\IllaoiPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\IreliaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\IvernPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\JarvanPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\JaxPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\JaycePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\JhinPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\JinxPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KaisaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KalistaMarkPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KalistaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KassadinPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KaylePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KennenPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KhazixPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KledPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\KogmawPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\LeonaMarkPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\LeonaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\LucianPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\LuxPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\MalphitePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\MasterYiPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\MissFortunePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\MonkeyKingPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\NamiMarkPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\NasusPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\NautilusPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\NeekoPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\NidaleePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\NocturnePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\OriannaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\OrnnPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\PoppyPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\QiyanaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\QuinnPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RammusPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RekSaiPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RenataMarkPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RenataPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RenektonPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RengarPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RivenPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\RumblePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SamiraPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SejuaniPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SettPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ShacoPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ShenPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ShyvanaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SionPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SkarnerPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SonaMarkPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SonaPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\SylasPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\TahmKenchPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\TalonPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\TaricPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\TeemoPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ThreshPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\TrundlePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\TwistedFatePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\UdyrPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\UrgotPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\VarusPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\VaynePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\VexPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ViktorPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ViPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\VolibearPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\WarwickPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\XayahMarkPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\XinZhaoPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\YasuoPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\YorickPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ZeriPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ZiggsPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\ZoePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\DamagePassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Aatrox.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ahri.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Akali.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Akshan.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Alistar.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Amumu.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Anivia.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Annie.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Aphelios.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ashe.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\AurelionSol.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Azir.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Bard.h" />
+    <ClInclude Include="Plugins\DamageLib\Passives\Champions\BardPassive.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\BelVeth.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Blitzcrank.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Brand.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Braum.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Caitlyn.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Camille.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Cassiopeia.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\ChoGath.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Corki.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Darius.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Diana.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Draven.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\DrMundo.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ekko.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Elise.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Evelynn.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ezreal.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Fiddlesticks.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Fiora.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Fizz.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Galio.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Gangplank.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Garen.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Gnar.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Gragas.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Graves.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Gwen.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Hecarim.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Heimerdinger.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Illaoi.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Irelia.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ivern.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Janna.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\JarvanIV.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Jax.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Jayce.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Jhin.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Jinx.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kaisa.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kalista.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Karma.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Karthus.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kassadin.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Katarina.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kayle.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kayn.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kennen.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\KhaZix.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kindred.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Kled.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\KogMaw.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\KSante.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Leblanc.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\LeeSin.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Leona.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Lillia.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Lissandra.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Lucian.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Lulu.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Lux.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Malphite.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Malzahar.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Maokai.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\MasterYi.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Milio.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\MissFortune.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Mordekaiser.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Morgana.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Nami.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Nasus.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Nautilus.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Neeko.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Nidalee.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Nilah.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Nocturne.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Nunu.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Olaf.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Orianna.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ornn.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Pantheon.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Poppy.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Pyke.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Qiyana.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Quinn.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Rakan.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Rammus.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\RekSai.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Rell.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\RenataGlasc.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Renekton.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Rengar.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Riven.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Rumble.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ryze.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Samira.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Sejuani.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Senna.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Seraphine.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Sett.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Shaco.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Shen.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Shyvana.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Singed.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Sion.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Sivir.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Skarner.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Sona.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Soraka.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Swain.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Sylas.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Syndra.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\TahmKench.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Taliyah.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Talon.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Taric.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Teemo.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Thresh.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Tristana.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Trundle.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Tryndamere.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\TwistedFate.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Twitch.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Udyr.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Urgot.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Varus.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Vayne.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Veigar.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\VelKoz.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Vex.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Vi.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Viego.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Viktor.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Vladimir.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Volibear.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Warwick.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Wukong.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Xayah.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Xerath.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\XinZhao.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Yasuo.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Yone.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Yorick.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Yuumi.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Zac.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Zed.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Zeri.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Ziggs.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Zilean.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Zoe.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\Champions\Zyra.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\DamageChamp.h" />
+    <ClInclude Include="Plugins\DamageLib\Spells\DamageSpell.h" />
+    <ClInclude Include="Plugins\Evade\Algorithm\EvadeGrid.h" />
+    <ClInclude Include="Plugins\Evade\Algorithm\StandardEvade.h" />
+    <ClInclude Include="Plugins\Evade\Algorithm\ThetaStar.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Aatrox.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ahri.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Akali.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Akshan.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Alistar.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Amumu.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Anivia.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Annie.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Aphelios.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ashe.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\AurelionSol.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Azir.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Bard.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Belveth.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Blitzcrank.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Brand.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Braum.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Caitlyn.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Camille.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Cassiopeia.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\ChoGath.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Corki.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Darius.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Diana.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Draven.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\DrMundo.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ekko.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Elise.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Evelynn.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ezreal.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Fiddlesticks.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Fiora.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Fizz.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Galio.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Gangplank.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Gnar.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Graves.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Gwen.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Hecarim.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Heimerdinger.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Illaoi.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Irelia.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ivern.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Janna.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Jarvan.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Jayce.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Jhin.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Jinx.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Kaisa.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Kalista.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Karma.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Karthus.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Kassadin.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Katarina.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Kayle.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Kayn.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Kennen.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Khazix.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Kled.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\KogMaw.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\LeBlanc.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\LeeSin.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Leona.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Lillia.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Lissandra.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Lucian.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Lulu.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Lux.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Malphite.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Malzahar.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Maokai.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Mordekaiser.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Morgana.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Nami.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Nautilus.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Neeko.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Nidalee.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Nilah.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Nocturne.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Olaf.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Orianna.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ornn.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Pantheon.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Poppy.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Pyke.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Qiyana.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Quinn.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Rakan.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Rammus.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\RekSai.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Rell.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Renata.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Renekton.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Riven.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Rumble.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ryze.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Samira.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Sejuani.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Senna.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Seraphine.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Sett.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Shen.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Shyvana.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Sion.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Sivir.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Skarner.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Sona.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Soraka.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Swain.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Sylas.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Syndra.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\TahmKench.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Taliyah.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Talon.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Taric.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Thresh.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\tmp_template.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Tristana.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Tryndamere.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\TwistedFate.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Twitch.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Urgot.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Varus.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Veigar.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Velkoz.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Vex.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Vi.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Viego.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Viktor.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Volibear.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Warwick.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Xayah.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Xerath.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\XinZhao.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Yasuo.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Yone.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Yorick.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Zac.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Zed.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Zeri.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Ziggs.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Zilean.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Zoe.h" />
+    <ClInclude Include="Plugins\Evade\DB\Champions\Zyra.h" />
+    <ClInclude Include="Plugins\Evade\DB\EvadeDB.h" />
+    <ClInclude Include="Plugins\Evade\DB\EvadeSpellData.h" />
+    <ClInclude Include="Plugins\Evade\Evade.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedCircle.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedCone.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedCustomShape.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedLine.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedMissileLine.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedPerpendicularLine.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedRing.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\DetectedSpells\DetectedSpell.h" />
+    <ClInclude Include="Plugins\Evade\SpellDetector\SpellDetector.h" />
+    <ClInclude Include="Plugins\HealthPred\HealthPrediction.h" />
+    <ClInclude Include="Plugins\Orbwalker\Orbwalker.h" />
+    <ClInclude Include="Plugins\Orbwalker\TurretMissileManager.h" />
+    <ClInclude Include="Plugins\Permashow\PermashowDebug.h" />
+    <ClInclude Include="Plugins\Plugin.h" />
+    <ClInclude Include="Plugins\Prediction\AoePrediction.h" />
+    <ClInclude Include="Plugins\Prediction\PathsCache.h" />
+    <ClInclude Include="Plugins\Prediction\Prediction.h" />
+    <ClInclude Include="Plugins\TargetSelector\TargetSelector.h" />
+    <ClInclude Include="Plugins\Utils\Collisions.h" />
+    <ClInclude Include="SDK\clipper2\clipper.core.h" />
+    <ClInclude Include="SDK\clipper2\clipper.engine.h" />
+    <ClInclude Include="SDK\clipper2\clipper.export.h" />
+    <ClInclude Include="SDK\clipper2\clipper.h" />
+    <ClInclude Include="SDK\clipper2\clipper.minkowski.h" />
+    <ClInclude Include="SDK\clipper2\clipper.offset.h" />
+    <ClInclude Include="SDK\clipper2\clipper.rectclip.h" />
+    <ClInclude Include="SDK\FAIcons.h" />
+    <ClInclude Include="SDK\Geometry.h" />
+    <ClInclude Include="SDK\SDK.h" />
+    <ClInclude Include="SDK\Vector.h" />
+    <ClInclude Include="Plugins\Awareness\StasisTracker\StasisTracker.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{113edf61-7d7b-4049-b37a-a1d051f7f4db}</ProjectGuid>
+    <RootNamespace>SamplePlugin</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Core</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>C:\LeagueHub\Plugins\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(AppData)\Chimera\Plugins\</OutDir>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\tmp\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SAMPLEPLUGIN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;SAMPLEPLUGIN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <DisableSpecificWarnings>4244;4305</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;SAMPLEPLUGIN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;SAMPLEPLUGIN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+      <AdditionalOptions>/Zc:threadSafeInit- -Wno-unused-function %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
